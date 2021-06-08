@@ -50,6 +50,31 @@ body {
     @media only screen and (max-width: 1000px) {
         border-radius: 0;
     }
+
+    .trail {
+        @media(max-width: 650px) {
+            .box1:before {
+            content: '1'
+            }
+            .box2:before {
+                content: '2'
+            }
+            .box3:before {
+                content: '3'
+            }
+            .box4:before {
+                content: '4'
+            }
+            .box5:before {
+                content: '5'
+            }
+            .box1 > span {display:none;}
+            .box2 > span {display:none;}
+            .box3 > span {display:none;}
+            .box4 > span {display:none;}
+            .box5 > span {display:none;}
+        }
+    }
 }
 
 .slider {
@@ -79,6 +104,59 @@ body {
         @media only screen and (max-width: 650px) {
             grid-template-columns: 1fr;
             grid-template-rows: repeat(2, 1fr);
+        }
+
+        .change {
+            z-index: 100000;
+            grid-column: 1;
+            grid-row: 1;
+            padding: 30px 0px 0px 30px;
+            //display: flex;
+            height: 100%;
+            //text-align: end;
+
+            button {
+                background-color: rgba(0, 0, 0, 0);
+                background-repeat: no-repeat;
+                //background-attachment: fixed;
+                background-position: center;
+                background-size: 100% 100%;
+                //transform: skewX(-7deg);
+                border: none;
+                width: 50px;
+                height: 25px;
+                margin: 0px 0px 0px 0px;
+                opacity: 0.6;
+                border-radius: 30%;
+                cursor: pointer;
+                transition: all .3s ease;
+    
+                &:hover {opacity: .8;}
+    
+                &:focus {
+                    outline: none;
+                    border: none;
+                }
+    
+                @media only screen and (max-width: 650px) {
+                    //margin: -260px 0px 0px -150px;
+                    //transform: skewX(0deg);
+                }
+            }
+    
+            button#languaje-en {
+                background-image: url(../img/english.png);
+            }
+    
+            button#languaje-es {
+                background-image: url(../img/spanish.png);
+            }
+    
+            button#home {
+                background-image: url(../img/home.png);
+                width: 20px;
+                height: 20px;
+            }
         }
         
         .bg {
@@ -122,42 +200,6 @@ body {
                 }
 
             }
-
-            button {
-                background-color: rgba(0, 0, 0, 0);
-                background-repeat: no-repeat;
-                //background-attachment: fixed;
-                background-position: center;
-                background-size: 100% 100%;
-                transform: skewX(-7deg);
-                border: none;
-                width: 50px;
-                height: 25px;
-                margin: 10px 0px 0px 20px;
-                opacity: 0.6;
-                border-radius: 30%;
-                cursor: pointer;
-
-                @media only screen and (max-width: 650px) {
-                    margin: -260px 0px 0px -150px;
-                    transform: skewX(0deg);
-                }
-            }
-
-            button#languaje-en {
-                background-image: url(../img/english.png);
-            }
-
-            button#languaje-es {
-                background-image: url(../img/spanish.png);
-            }
-
-            button#home {
-                background-image: url(../img/home.png);
-                width: 20px;
-                height: 20px;
-            }
-
         }
 
         .details {

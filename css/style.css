@@ -11,7 +11,13 @@ html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
-  font-size: 62.5%;
+  font-size: 70%;
+}
+
+@media only screen and (max-height: 800px) {
+  html {
+    font-size: 62.5%;
+  }
 }
 
 @media only screen and (max-width: 800px) {
@@ -21,8 +27,8 @@ html {
 }
 
 body {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 153, 0, 0)), to(rgba(255, 0, 200, 0))), url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
-  background-image: linear-gradient(90deg, rgba(255, 153, 0, 0), rgba(255, 0, 200, 0)), url("https://images.unsplash.com/photo-1522252234503-e356532cafd5?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8ZGV2ZWxvcGVyfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 153, 0, 0)), to(rgba(255, 0, 200, 0))), url("../img/Fondo.jpg");
+  background-image: linear-gradient(90deg, rgba(255, 153, 0, 0), rgba(255, 0, 200, 0)), url("../img/Fondo.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -34,6 +40,16 @@ body {
   body {
     padding: 0;
   }
+}
+
+video {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .container {
@@ -86,7 +102,7 @@ body {
   display: -ms-flexbox;
   display: flex;
   width: 500%;
-  height: 55rem;
+  height: 100%;
   -webkit-transition: all .60s ease-in;
   transition: all .60s ease-in;
   -webkit-transform: translateX(0);
@@ -302,17 +318,23 @@ body {
 .slider .box .details#education {
   grid-column: none;
   grid-row: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .slider .box .details#education p {
   -webkit-column-count: 3;
           column-count: 3;
-  -webkit-column-gap: 3em;
-          column-gap: 3em;
+  -webkit-column-gap: 5%;
+          column-gap: 5%;
   -webkit-column-rule: 1px solid #fff;
           column-rule: 1px solid #fff;
-  -webkit-column-width: 250px;
-          column-width: 250px;
+  -webkit-column-width: 50%;
+          column-width: 50%;
 }
 
 .slider .box .details#skills {
@@ -323,6 +345,17 @@ body {
   font-size: 2rem;
   margin: 0px;
   text-align: center;
+}
+
+.slider .box.education {
+  grid-column: none;
+  grid-row: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .slider .box1 {
@@ -587,6 +620,10 @@ body {
   .trail div {
     padding: 1rem;
   }
+}
+
+.trail span {
+  opacity: 0.99;
 }
 
 .active {

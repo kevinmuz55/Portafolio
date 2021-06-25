@@ -164,11 +164,6 @@ video {
                     outline: none;
                     border: none;
                 }
-    
-                @media only screen and (max-width: 650px) {
-                    //margin: -260px 0px 0px -150px;
-                    //transform: skewX(0deg);
-                }
             }
     
             button#languaje-en {
@@ -197,15 +192,15 @@ video {
             padding-left: 20rem;    
             transform-origin: 0 100%;     
             
-            @media only screen and (max-width: 800px) {
+            /* @media only screen and (max-width: 800px) {
                 width: 65%;
-            }
+            } */
 
             @media only screen and (max-width: 650px) {
                 width: 100%;
                 left: 0;
                 bottom: 0;
-                height: 54%;
+                height: 100%;
                 transform: skewX(0deg);
             }
 
@@ -258,7 +253,7 @@ video {
                 margin-right: 8rem;
                 text-align: justify;
 
-                @media only screen and (max-width: 800px) {
+                @media only screen and (max-width: 650px) {
                     margin-right: 0;
                 }
             }
@@ -297,7 +292,7 @@ video {
                 column-gap: 5%;
                 column-rule: 1px solid #fff;
                 column-width: 50%;
-            }
+            }          
         }
 
         .details#skills {
@@ -308,6 +303,12 @@ video {
                 text-align: center;
             }
         }
+    }
+
+    .box4 .details div button {
+        @media only screen and (max-width: 650px) {
+            visibility: hidden;
+        }  
     }
 
     .box.education {
@@ -349,7 +350,7 @@ video {
             //transform: skewX(10deg);
             //margin: 50px 0px 0px 25px;
             margin: 30px 0px 0px 30px;
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 650px) {
                 width: 70%;
                 border-radius: 1rem;
                 //margin: 40px 0px 0px 25px;
@@ -360,7 +361,7 @@ video {
         img#photo {
             transform: skewX(10deg);
             margin: 10px 0px 0px 20px;
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 650px) {
                 width: 70%;
                 border-radius: 1rem;
                 margin: 15px 0px 0px 25px;
@@ -376,7 +377,7 @@ video {
             position: relative;
             transform: skewX(-10deg);
 
-            @media only screen and (max-width: 800px) {
+            @media only screen and (max-width: 650px) {
                 height: 20rem;
                 width: 20rem;
             }

@@ -207,12 +207,9 @@ video {
   padding-left: 20rem;
   -webkit-transform-origin: 0 100%;
           transform-origin: 0 100%;
-}
-
-@media only screen and (max-width: 800px) {
-  .slider .box .bg {
-    width: 65%;
-  }
+  /* @media only screen and (max-width: 800px) {
+                width: 65%;
+            } */
 }
 
 @media only screen and (max-width: 650px) {
@@ -220,7 +217,7 @@ video {
     width: 100%;
     left: 0;
     bottom: 0;
-    height: 54%;
+    height: 100%;
     -webkit-transform: skewX(0deg);
             transform: skewX(0deg);
   }
@@ -286,7 +283,7 @@ video {
   text-align: justify;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 650px) {
   .slider .box .details p {
     margin-right: 0;
   }
@@ -347,6 +344,12 @@ video {
   font-size: 2rem;
   margin: 0px;
   text-align: center;
+}
+
+@media only screen and (max-width: 650px) {
+  .slider .box4 .details div button {
+    visibility: hidden;
+  }
 }
 
 .slider .box.education {
@@ -482,7 +485,7 @@ video {
   margin: 30px 0px 0px 30px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 650px) {
   .slider .illustration img {
     width: 70%;
     border-radius: 1rem;
@@ -496,7 +499,7 @@ video {
   margin: 10px 0px 0px 20px;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 650px) {
   .slider .illustration img#photo {
     width: 70%;
     border-radius: 1rem;
@@ -513,7 +516,7 @@ video {
           transform: skewX(-10deg);
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 650px) {
   .slider .illustration div {
     height: 20rem;
     width: 20rem;

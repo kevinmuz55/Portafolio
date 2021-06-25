@@ -66,26 +66,40 @@ video {
 
     .trail {
         @media(max-width: 650px) {
-            .box1:before {
-            content: '1'
+
+            .box1, .box2, .box3, .box4, .box5 {
+                text-indent: -9999px;
+                line-height: 0; // Collapse the original line
             }
-            .box2:before {
+
+            .box1:after, .box2:after, .box3:after, .box4:after, .box5:after {
+                text-indent: 0;
+                display: block;
+                line-height: initial; // New content takes up original line height
+            }
+
+            .box1:after {
+                content: '1'
+            }
+            .box2:after {
                 content: '2'
             }
-            .box3:before {
+            .box3:after {
                 content: '3'
             }
-            .box4:before {
+            .box4:after {
                 content: '4'
             }
-            .box5:before {
+            .box5:after {
                 content: '5'
             }
+
+            /*
             .box1 > span {display:none;}
             .box2 > span {display:none;}
             .box3 > span {display:none;}
             .box4 > span {display:none;}
-            .box5 > span {display:none;}
+            .box5 > span {display:none;} */
         }
     }
 }
@@ -445,10 +459,6 @@ video {
         @media only screen and (max-width: 650px) {
             padding: 1rem;
         }
-    }
-
-    span {
-        opacity: 0.99;
     }
 }
 

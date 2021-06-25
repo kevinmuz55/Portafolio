@@ -65,35 +65,37 @@ video {
 }
 
 @media (max-width: 650px) {
-  .container .trail .box1:before {
+  .container .trail {
+    /*
+            .box1 > span {display:none;}
+            .box2 > span {display:none;}
+            .box3 > span {display:none;}
+            .box4 > span {display:none;}
+            .box5 > span {display:none;} */
+  }
+  .container .trail .box1, .container .trail .box2, .container .trail .box3, .container .trail .box4, .container .trail .box5 {
+    text-indent: -9999px;
+    line-height: 0;
+  }
+  .container .trail .box1:after, .container .trail .box2:after, .container .trail .box3:after, .container .trail .box4:after, .container .trail .box5:after {
+    text-indent: 0;
+    display: block;
+    line-height: initial;
+  }
+  .container .trail .box1:after {
     content: '1';
   }
-  .container .trail .box2:before {
+  .container .trail .box2:after {
     content: '2';
   }
-  .container .trail .box3:before {
+  .container .trail .box3:after {
     content: '3';
   }
-  .container .trail .box4:before {
+  .container .trail .box4:after {
     content: '4';
   }
-  .container .trail .box5:before {
+  .container .trail .box5:after {
     content: '5';
-  }
-  .container .trail .box1 > span {
-    display: none;
-  }
-  .container .trail .box2 > span {
-    display: none;
-  }
-  .container .trail .box3 > span {
-    display: none;
-  }
-  .container .trail .box4 > span {
-    display: none;
-  }
-  .container .trail .box5 > span {
-    display: none;
   }
 }
 
@@ -620,10 +622,6 @@ video {
   .trail div {
     padding: 1rem;
   }
-}
-
-.trail span {
-  opacity: 0.99;
 }
 
 .active {

@@ -1,6 +1,6 @@
 # Portafolio
 
-_Proyecto de mi portafolio_
+_Proyecto de mi portafolio._
 
 ## 🛠️ Construcción
 
